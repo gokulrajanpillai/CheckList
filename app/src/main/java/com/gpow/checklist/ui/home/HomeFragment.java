@@ -1,9 +1,12 @@
 package com.gpow.checklist.ui.home;
 
+import android.database.DataSetObserver;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -36,6 +39,17 @@ public class HomeFragment extends Fragment {
             }
         });
         return root;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        ListView todoList = (ListView)view.findViewById(R.id.todoList);
+        todoList.setAdapter(new DoListAdapter(getContext(), DoListType.TodoList));
+
+//        ListView notTodoList = (ListView)view.findViewById(R.id.notTodoList);
+//        todoList.setAdapter(new DoListAdapter(getContext(), DoListType.NotTodoList));
     }
 
     @Override

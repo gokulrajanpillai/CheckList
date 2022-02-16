@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/doItemText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:textAlignment="center"
+        android:text="Some content"
+        android:textSize="8pt"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        />
+</LinearLayout>
